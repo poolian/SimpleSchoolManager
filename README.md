@@ -3,7 +3,7 @@
 Can manage school memeber Information
 --------------------------
 
-[School Manager functions]
+[functions]
 
 
 1. Register
