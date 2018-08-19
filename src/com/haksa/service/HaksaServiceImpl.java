@@ -229,9 +229,9 @@ public class HaksaServiceImpl implements HaksaService{
 			System.out.println(num+". "+find.toString());
 			num++;
 		}
-		System.out.print("select:");
-		int getIdx = (sc.nextInt()-1);
 		if(0<=getIdx && getIdx<findList.size()) {
+			System.out.print("select:");
+			int getIdx = (sc.nextInt()-1);
 			System.out.println("\n * "+findList.get(getIdx).toString());
 			System.out.println("\nDo you want to delete it? (y|n)");
 			String yn = sc.next();
