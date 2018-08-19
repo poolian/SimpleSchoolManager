@@ -261,19 +261,34 @@ public class HaksaServiceImpl implements HaksaService{
 	@Override
 	public void selectAll() {
 		con();
+		boolean flag = true;
+		while(flag){
 		System.out.println("\n[School Member List]\n");
-		String sql = "select * from school_member";
-		try {
+		System.out.println("1.Student 2.Teacher 3.Worker 4.All (0.back)");
+		String sql = null;
+		int menu = sc.nextInt();
+			switch(menu){
+				case 1: sql = "select * from school_member where key=1"; break;
+				case 2: sql = "select * from school_member where key=2"; break;
+				case 3: sql = "select * from school_member where key=3"; break;
+				case 4: sql = "select * from school_member"; break;
+				default : flag = false; discon(); break;
+			}
+		if(flag){
+			try {
 			pstmt = conn.prepareStatement(sql);
 			rs=pstmt.executeQuery();
 			while(rs.next()) {
 				System.out.println(key_name[rs.getInt("vkey")].substring(0, 1)+" | name:"+rs.getString("name")+" | age:"+rs.getInt("age")+" | "+rs.getString("value"));
 			}
-		}catch(Exception e) {
-			e.printStackTrace();
-			
-		}finally {
-			discon();
+			}catch(Exception e) {
+				e.printStackTrace();
+
+			}finally {
+				flag = false;
+				discon();
+			}
+		}
 		}
 	}
 
