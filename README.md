@@ -1,1 +1,1 @@
-# SimpleSchoolProject
+# SimpleSchoolManager
