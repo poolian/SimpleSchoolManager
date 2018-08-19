@@ -268,9 +268,9 @@ public class HaksaServiceImpl implements HaksaService{
 		String sql = null;
 		int menu = sc.nextInt();
 			switch(menu){
-				case 1: sql = "select * from school_member where key=1"; break;
-				case 2: sql = "select * from school_member where key=2"; break;
-				case 3: sql = "select * from school_member where key=3"; break;
+				case 1: sql = "select * from school_member where vkey=1"; break;
+				case 2: sql = "select * from school_member where vkey=2"; break;
+				case 3: sql = "select * from school_member where vkey=3"; break;
 				case 4: sql = "select * from school_member"; break;
 				default : flag = false; discon(); break;
 			}
