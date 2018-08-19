@@ -1,5 +1,6 @@
 # SimpleSchoolManager
 
+Can manage school memeber Information
 --------------------------
 
 [School Manager functions]
